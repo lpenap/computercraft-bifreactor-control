@@ -37,7 +37,7 @@ Install
 ----------------------------
 There is a bootstraped installer on pastebin that downloads the code from Github. From an advanced Computercraft computer:
 
-    pastebin run 3W2G3Vc9 [<branch>|<tag>]
+    pastebin run KYKzgA1Z [<branch>|<tag>]
 
 Branch defaults to master. The installer will get the files from github and create both the startup lua file and the main program.
 
@@ -93,7 +93,7 @@ Resources
 	- https://github.com/sandalle/minecraft_bigreactor_control
 
 - Easy Installer:
-    - https://pastebin.com/3W2G3Vc9
+    - https://pastebin.com/KYKzgA1Z
 - Code to get files from github from:
     - https://github.com/eric-wieser/computercraft-github
 - Start-up script is available from:

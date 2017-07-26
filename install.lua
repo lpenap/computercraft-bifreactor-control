@@ -1,4 +1,4 @@
--- ComputerCraft BigReactors Control installer. Bootstrapped by https://pastebin.com/3W2G3Vc9
+-- ComputerCraft BigReactors Control installer. Bootstrapped by https://pastebin.com/KYKzgA1Z
 
 local repo, tree = select(1,...)
 if not tree then
@@ -6,7 +6,7 @@ if not tree then
 	tree = repo or 'master'
 end
 if not repo then
-	repo = 'lpenap/computercraft-bifreactor-control'
+	repo = 'sandalle/minecraft_bigreactor_control'
 end
 
 local REPO_BASE = ('https://raw.githubusercontent.com/%s/%s/'):format(repo, tree)
@@ -64,5 +64,5 @@ end
 rewriteDofiles()
 fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'bigreactor-control.lua')
 fs.move('bigreactor-control.rom/lolmer_bigreactor_startup.lua', 'startup')
-print("BigReactors Control Program by lpenap installed!")
+print("BigReactors Control Program installed!")
 dofile('startup')
