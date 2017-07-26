@@ -1,4 +1,4 @@
--- ComputerCraft BigReactors Control installer. Bootstrapped by https://pastebin.com/KYKzgA1Z
+-- ComputerCraft BigReactors Control installer. Bootstrapped by https://pastebin.com/3W2G3Vc9
 
 local repo, tree = select(1,...)
 if not tree then
@@ -6,7 +6,7 @@ if not tree then
 	tree = repo or 'master'
 end
 if not repo then
-	repo = 'sandalle/minecraft_bigreactor_control'
+	repo = 'lpenap/computercraft-bifreactor-control'
 end
 
 local REPO_BASE = ('https://raw.githubusercontent.com/%s/%s/'):format(repo, tree)
