@@ -114,8 +114,8 @@ See https://github.com/sandalle/minecraft_bigreactor_control/issues?q=is%3Aopen+
 
 
 -- Some global variables
-local progVer = "0.2"
-local progName = "ReactorControl"
+local progVer = "0.3.19"
+local progName = "EZ-NUKE"
 local sideClick, xClick, yClick = nil, 0, 0
 local loopTime = 2
 local controlRodAdjustAmount = 1 -- Default Reactor Rod Control % adjustment amount

@@ -62,7 +62,7 @@ for key, path in pairs(FILES) do
 end
 
 rewriteDofiles()
-fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'bigreactor-control.lua')
+fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'reactorcontrol.lua')
 fs.move('bigreactor-control.rom/lolmer_bigreactor_startup.lua', 'startup')
 print("BigReactors Control Program installed!")
 dofile('startup')

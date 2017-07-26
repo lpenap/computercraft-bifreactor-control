@@ -40,4 +40,4 @@ os.setComputerLabel("ReactorControl")
 -- Download http://pastebin.com/fguScPBQ and name "reactorcontrol"
 -- shell.run("pastebin", "get", "fguScPBQ", "reactorcontrol")
 
-shell.run("bigreactor-control.lua")
+shell.run("reactorcontrol.lua")
