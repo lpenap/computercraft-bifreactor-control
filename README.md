@@ -33,7 +33,7 @@ When using actively cooled reactors with turbines, keep the following in mind:
 - You will need about 10 mB of water for each 1 mB of steam that you want to create in a 7^3 reactor.
 - Two 15x15x14 Turbines can output 260K RF/t by just one 7^3 (four rods) reactor putting out 4k mB steam.
 
-Install
+Install or Update
 ----------------------------
 There is a bootstraped installer on pastebin that downloads the code from Github. From an advanced Computercraft computer:
 
