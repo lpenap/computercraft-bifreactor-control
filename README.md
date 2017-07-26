@@ -33,6 +33,14 @@ When using actively cooled reactors with turbines, keep the following in mind:
 - You will need about 10 mB of water for each 1 mB of steam that you want to create in a 7^3 reactor.
 - Two 15x15x14 Turbines can output 260K RF/t by just one 7^3 (four rods) reactor putting out 4k mB steam.
 
+Install
+----------------------------
+There is a bootstraped installer on pastebin that downloads the code from Github. From an advanced Computercraft computer:
+
+    pastebin run 3W2G3Vc9 [<branch>|<tag>]
+
+Branch defaults to master. The installer will get the files from github and create both the startup lua file and the main program.
+
 Features
 ----------------------------
 - Configurable min/max energy buffer and min/max temperature via ReactorOptions file.
@@ -84,6 +92,10 @@ Resources
 	- http://pastebin.com/fguScPBQ
 	- https://github.com/sandalle/minecraft_bigreactor_control
 
+- Easy Installer:
+    - https://pastebin.com/3W2G3Vc9
+- Code to get files from github from:
+    - https://github.com/eric-wieser/computercraft-github
 - Start-up script is available from:
 	- http://pastebin.com/ZTMzRLez
 	- https://github.com/sandalle/minecraft_bigreactor_control
