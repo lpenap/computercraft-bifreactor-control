@@ -1,24 +1,16 @@
 -- ComputerCraft BigReactors Control installer. Bootstrapped by https://pastebin.com/3W2G3Vc9
 
-local repo, tree = select(1,...)
+local tree = select(1,...)
 if not tree then
-	-- assume tree as the preferred argument.
-	tree = repo or 'master'
+	tree = 'master'
 end
-if not repo then
-	repo = 'lpenap/computercraft-bifreactor-control'
-end
+local repo = 'lpenap/computercraft-bifreactor-control'
 
 local REPO_BASE = ('https://raw.githubusercontent.com/%s/%s/'):format(repo, tree)
 
 local FILES = {
 	'lolmer_bigreactor_monitor_prog.lua',
 	'lolmer_bigreactor_startup.lua'
-}
-
-local FINAL_FILES = {
-	'reactorcontrol'.
-	'startup'
 }
 
 local function request(url_path)
@@ -86,9 +78,9 @@ local function doInstall()
 		moveFiles()
 		print("BigReactors Control Program installed!")
 		print("")
-		print("Executing startup script in 5 seconds...")
+		print("Going to reboot the computer in 5 seconds...")
 		os.sleep(5)
-		dofile('startup')
+		os.reboot()
 	else
 		print("There was a problem installing the files.")
 	end
