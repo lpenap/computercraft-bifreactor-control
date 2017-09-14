@@ -1,6 +1,10 @@
 Lolmer's iteration of the EZ-NUKE Minecraft BigReactor Computercraft Control Program with more stable control algorithms
 ============================
 
+Fork Note
+----------------------------
+In this fork, a bootstraped installer on pastebin will let you install this program from Gihub. See "Install or Update" section for more info.
+
 Description
 ----------------------------
 This program controls a Big Reactors nuclear reactor in Minecraft with a Computercraft computer, using Computercraft's own wired modem connected to the reactors computer control port. It uses a PID (en.wikipedia.org/wiki/PID_controller) for each device controlled.
@@ -37,7 +41,7 @@ Install or Update
 ----------------------------
 There is a bootstraped installer on pastebin that downloads the code from Github. From an advanced Computercraft computer:
 
-    pastebin run KYKzgA1Z [<branch>|<tag>]
+    pastebin run 3W2G3Vc9 [<branch>|<tag>]
 
 Branch defaults to master. The installer will get the files from github and create both the startup lua file and the main program.
 
