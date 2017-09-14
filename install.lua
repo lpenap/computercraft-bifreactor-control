@@ -16,6 +16,11 @@ local FILES = {
 	'lolmer_bigreactor_startup.lua'
 }
 
+local FINAL_FILES = {
+	'reactorcontrol'.
+	'startup'
+}
+
 local function request(url_path)
 	local request = http.get(REPO_BASE..url_path)
 	local status = request.getResponseCode()
@@ -43,26 +48,51 @@ local function rewriteDofiles()
 	end
 end
 
+local function moveFiles()
+	fs.delete('reactorcontrol')
+	fs.delete('startup')
+	fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'reactorcontrol')
+	fs.move('bigreactor-control.rom/lolmer_bigreactor_startup.lua', 'startup')
+end
+
 -- install the FILES for control program and startup
-for key, path in pairs(FILES) do
-	local try = 0
-	local status, response = request(path)
-	while status ~= 200 and try <= 3 do
-		status, response = request(path)
-		try = try + 1
+
+local function doInstall()
+	print ("Fetching BigReactor control program...")
+	print ("Using repo: " .. REPO_BASE)
+	local isDownloadOk = true
+	for key, path in pairs(FILES) do
+		local try = 0
+		local status, response = request(path)
+		print ("  Fetching " .. path)
+		while status ~= 200 and try <= 3 do
+			status, response = request(path)
+			try = try + 1
+		end
+		if status then
+			print ("    OK")
+			makeFile(path, response)
+		else
+			isDownloadOk = false
+			print (('Unable to download %s'):format(path))
+			fs.delete('bigreactor-control.rom')
+			fs.delete('reactorcontrol')
+			fs.delete('startup')
+			break
+		end
 	end
-	if status then
-		makeFile(path, response)
+	rewriteDofiles()
+	if isDownloadOk then
+		moveFiles()
+		print("BigReactors Control Program installed!")
+		print("")
+		print("Executing startup script in 5 seconds...")
+		os.sleep(5)
+		dofile('startup')
 	else
-		printError(('Unable to download %s'):format(path))
-		fs.delete('bigreactor-control.rom')
-		fs.delete('reactorcontrol')
-		break
+		print("There was a problem installing the files.")
 	end
 end
 
-rewriteDofiles()
-fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'reactorcontrol')
-fs.move('bigreactor-control.rom/lolmer_bigreactor_startup.lua', 'startup')
-print("BigReactors Control Program installed!")
-dofile('startup')
+
+doInstall()
