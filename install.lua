@@ -56,13 +56,13 @@ for key, path in pairs(FILES) do
 	else
 		printError(('Unable to download %s'):format(path))
 		fs.delete('bigreactor-control.rom')
-		fs.delete('bigreactor-control.lua')
+		fs.delete('reactorcontrol')
 		break
 	end
 end
 
 rewriteDofiles()
-fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'reactorcontrol.lua')
+fs.move('bigreactor-control.rom/lolmer_bigreactor_monitor_prog.lua', 'reactorcontrol')
 fs.move('bigreactor-control.rom/lolmer_bigreactor_startup.lua', 'startup')
 print("BigReactors Control Program installed!")
 dofile('startup')

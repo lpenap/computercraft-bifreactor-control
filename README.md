@@ -3,7 +3,7 @@ Lolmer's iteration of the EZ-NUKE Minecraft BigReactor Computercraft Control Pro
 
 Fork Note
 ----------------------------
-In this fork, a bootstraped installer on pastebin will let you install this program from Gihub. See "Install or Update" section for more info.
+In this fork, a bootstraped installer on pastebin will let you install this program from Github. See "Install or Update" section for more info.
 
 Description
 ----------------------------
