@@ -1,7 +1,7 @@
 Lolmer's iteration of the EZ-NUKE Minecraft BigReactor Computercraft Control Program with more stable control algorithms
 ============================
 
-Fork Note
+Fork Notes
 ----------------------------
 In this fork, a bootstraped installer on pastebin will let you install this program from Github. See "Install or Update" section for more info.
 
@@ -9,7 +9,8 @@ Description
 ----------------------------
 This program controls a Big Reactors nuclear reactor in Minecraft with a Computercraft computer, using Computercraft's own wired modem connected to the reactors computer control port. It uses a PID (en.wikipedia.org/wiki/PID_controller) for each device controlled.
 
-This program was designed to work with the mods and versions installed on FTB Infinity 1.7.0 (http://www.feed-the-beast.com/modpacks/FTBInfinity)
+Tested modpacks:
+- FTB Infinity Evolved 1.7.0 (https://www.feed-the-beast.com/projects/ftb-infinity-evolved).
 
 To simplify the code and guesswork, I assume the following monitor layout, where each "monitor" listed below is a collection of three wide by two high Advanced Monitors:
 - One Advanced Monitor for overall status display plus
