@@ -4,7 +4,7 @@ local tree = select(1,...)
 if not tree then
 	tree = 'master'
 end
-local repo = 'lpenap/computercraft-bifreactor-control'
+local repo = 'lpenap/computercraft-bigreactor-control'
 
 local REPO_BASE = ('https://raw.githubusercontent.com/%s/%s/'):format(repo, tree)
 
